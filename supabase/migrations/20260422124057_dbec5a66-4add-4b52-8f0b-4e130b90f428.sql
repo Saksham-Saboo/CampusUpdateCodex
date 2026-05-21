@@ -1,0 +1,2 @@
+UPDATE colleges SET image_url = 'https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&q=80&auto=format&fit=crop' WHERE id = '18c7b523-44e2-4d33-bb7f-f9ef1dd9206e';
+UPDATE colleges SET image_url = 'https://images.unsplash.com/photo-1607237138185-eedd9c632b0b?w=1200&q=80&auto=format&fit=crop' WHERE id = '2051d230-376e-40d6-863a-9d94a67aeafd';

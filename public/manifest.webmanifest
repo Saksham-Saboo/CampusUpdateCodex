@@ -1,0 +1,12 @@
+{
+  "name": "CampusUpdates — MBA Discovery",
+  "short_name": "CampusUpdates",
+  "description": "India's MBA-only discovery platform. Compare colleges, calculate ROI, apply with expert counselling.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F4F6FB",
+  "theme_color": "#1043E9",
+  "icons": [
+    { "src": "/favicon.ico", "sizes": "any", "type": "image/x-icon" }
+  ]
+}
