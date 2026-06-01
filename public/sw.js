@@ -18,6 +18,7 @@ self.addEventListener("fetch", (event) => {
   const url = new URL(req.url);
   // never cache API or auth
   if (url.pathname.startsWith("/api/") || url.pathname.startsWith("/auth")) return;
+  if (req.mode === "navigate") return;
 
   // stale-while-revalidate for same-origin GETs
   if (url.origin === self.location.origin) {

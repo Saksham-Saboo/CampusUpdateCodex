@@ -40,7 +40,7 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" },
     ],
     scripts: [
-      { children: "if('serviceWorker' in navigator){window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js').catch(()=>{})})}" },
+      { children: "if('serviceWorker' in navigator){var l=location.hostname;var local=l==='localhost'||l==='127.0.0.1'||l==='::1';window.addEventListener('load',()=>{if(local){navigator.serviceWorker.getRegistrations().then(rs=>rs.forEach(r=>r.unregister())).catch(()=>{});if('caches' in window)caches.keys().then(keys=>keys.forEach(k=>caches.delete(k))).catch(()=>{});}else{navigator.serviceWorker.register('/sw.js').catch(()=>{})}})}" },
       { children: "try{var t=localStorage.getItem('theme');var p=window.matchMedia('(prefers-color-scheme: dark)').matches;if(t==='dark'||(!t&&p))document.documentElement.classList.add('dark')}catch(e){}" },
     ],
   }),
